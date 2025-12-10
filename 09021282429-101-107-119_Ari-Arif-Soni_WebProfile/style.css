@@ -2,210 +2,218 @@
    1. VARIABLES & RESET
    ========================================= */
 :root {
-    --primary-gold: #d4af37;
-    --gold-hover: #b4932a;
-    --dark-charcoal: #1a1a1a;
-    --body-bg: #ffffff;
-    --text-main: #2c2c2c;
-    --text-muted: #666666;
-    --card-bg: #ffffff;
-    --navbar-bg: rgba(255, 255, 255, 0.85);
-    --shadow-soft: 0 10px 40px rgba(0,0,0,0.06);
-    --border-radius: 12px;
+  --primary-gold: #d4af37;
+  --gold-hover: #b4932a;
+  --dark-charcoal: #1a1a1a;
+  --body-bg: #ffffff;
+  --text-main: #2c2c2c;
+  --text-muted: #666666;
+  --card-bg: #ffffff;
+  --navbar-bg: rgba(255, 255, 255, 0.85);
+  --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.06);
+  --border-radius: 12px;
 }
 
 /* =========================================
    2. TYPOGRAPHY
    ========================================= */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--body-bg);
-    color: var(--text-main);
-    line-height: 1.8;
-    transition: background-color 0.4s ease, color 0.4s ease;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--body-bg);
+  color: var(--text-main);
+  line-height: 1.8;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-h1, h2, h3, h4, .navbar-brand {
-    font-family: 'Playfair Display', serif;
-    letter-spacing: -0.5px;
+h1,
+h2,
+h3,
+h4,
+.navbar-brand {
+  font-family: "Playfair Display", serif;
+  letter-spacing: -0.5px;
 }
 
 .section-title {
-    position: relative;
-    display: inline-block;
-    padding-bottom: 15px;
-    margin-bottom: 30px;
-    font-weight: 700;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  font-weight: 700;
 }
 
 .section-title::after {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 3px;
-    background-color: var(--primary-gold);
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-gold);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* =========================================
    3. NAVBAR
    ========================================= */
 .navbar {
-    background-color: var(--navbar-bg) !important;
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-    padding: 15px 0;
-    transition: all 0.3s ease;
+  background-color: var(--navbar-bg) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 15px 0;
+  transition: all 0.3s ease;
 }
 
 .navbar-brand {
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--dark-charcoal) !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--dark-charcoal) !important;
 }
 
 .nav-link {
-    color: var(--text-main) !important;
-    font-weight: 500;
-    margin: 0 10px;
-    position: relative;
+  color: var(--text-main) !important;
+  font-weight: 500;
+  margin: 0 10px;
+  position: relative;
 }
 
-.nav-link:hover, .nav-link.active {
-    color: var(--primary-gold) !important;
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-gold) !important;
 }
 
 /* =========================================
    4. HERO SECTION
    ========================================= */
 .hero-section {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/hero-bg.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 90vh;
-    color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("assets/images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 90vh;
+  color: white;
 }
 
 /* =========================================
    5. BUTTONS & CARDS
    ========================================= */
 .btn-gold {
-    background-color: var(--primary-gold);
-    color: white;
-    padding: 12px 35px;
-    border-radius: 50px;
-    font-weight: 600;
-    border: 2px solid var(--primary-gold);
-    transition: all 0.3s ease;
+  background-color: var(--primary-gold);
+  color: white;
+  padding: 12px 35px;
+  border-radius: 50px;
+  font-weight: 600;
+  border: 2px solid var(--primary-gold);
+  transition: all 0.3s ease;
 }
 
 .btn-gold:hover {
-    background-color: transparent;
-    color: var(--primary-gold);
+  background-color: transparent;
+  color: var(--primary-gold);
 }
 
-.custom-card, .service-box {
-    background-color: var(--card-bg);
-    border: 1px solid rgba(0,0,0,0.03) !important;
-    border-radius: var(--border-radius) !important;
-    padding: 2rem;
-    box-shadow: var(--shadow-soft);
-    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+.custom-card,
+.service-box {
+  background-color: var(--card-bg);
+  border: 1px solid rgba(0, 0, 0, 0.03) !important;
+  border-radius: var(--border-radius) !important;
+  padding: 2rem;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.4s ease, box-shadow 0.4s ease,
+    background-color 0.4s ease;
 }
 
-.custom-card:hover, .service-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+.custom-card:hover,
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.custom-card img {
+  min-height: 120px;
+  display: block;
+  object-fit: cover;
 }
 
 .accordion-item {
-    border: none;
-    background-color: transparent;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .accordion-button {
-    background-color: transparent;
-    color: var(--text-main);
-    font-weight: 600;
-    box-shadow: none !important;
+  background-color: transparent;
+  color: var(--text-main);
+  font-weight: 600;
+  box-shadow: none !important;
 }
 
 .accordion-button:not(.collapsed) {
-    color: var(--primary-gold);
-    background-color: transparent;
+  color: var(--primary-gold);
+  background-color: transparent;
 }
 
 /* =========================================
-   6. DARK MODE FIXES (TERMASUK GAMBAR)
+   6. DARK MODE
    ========================================= */
 body.dark-mode {
-    --body-bg: #121212;
-    --text-main: #ffffff;
-    --text-muted: #e0e0e0;
-    --card-bg: #1e1e1e;
-    --navbar-bg: rgba(18, 18, 18, 0.9);
-    --shadow-soft: 0 10px 40px rgba(0,0,0,0.5);
+  --body-bg: #121212;
+  --text-main: #ffffff;
+  --text-muted: #e0e0e0;
+  --card-bg: #1e1e1e;
+  --navbar-bg: rgba(18, 18, 18, 0.9);
+  --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
-/* Warna Navbar & Judul Kartu */
 body.dark-mode .navbar-brand,
-body.dark-mode h1, 
-body.dark-mode h2, 
-body.dark-mode h3, 
-body.dark-mode h4, 
-body.dark-mode h5, 
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
 body.dark-mode h6,
 body.dark-mode .card-title {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
 
-/* Warna Latar Bagian Abu-abu */
 body.dark-mode .bg-light {
-    background-color: #1a1a1a !important;
-    color: #ffffff !important;
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
 }
-
-/* TEKS UTAMA: Memaksa warna abu jadi putih terang */
 body.dark-mode .text-muted,
-body.dark-mode .lead, 
+body.dark-mode .lead,
 body.dark-mode .small,
 body.dark-mode p,
 body.dark-mode li,
 body.dark-mode label,
 body.dark-mode .accordion-body,
 body.dark-mode .card-text {
-    color: #d1d1d1 !important; 
+  color: #d1d1d1 !important;
 }
 
-/* Membalik Warna gambar*/
 body.dark-mode .custom-card img {
-    filter: invert(1) grayscale(100%);
-    opacity: 0.8;
+  filter: none;
+  opacity: 1;
 }
 
-/* Tombol Outline */
 body.dark-mode .btn-outline-dark {
-    color: #fff;
-    border-color: #fff;
+  color: #fff;
+  border-color: #fff;
 }
 body.dark-mode .btn-outline-dark:hover {
-    background-color: #fff;
-    color: #000;
+  background-color: #fff;
+  color: #000;
 }
 
-/* Form Input */
 body.dark-mode .form-control {
-    background-color: #2a2a2a;
-    border: 1px solid #444;
-    color: #fff;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  color: #fff;
 }
 body.dark-mode .form-control::placeholder {
-    color: #888;
+  color: #888;
 }
 body.dark-mode .accordion-item {
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
