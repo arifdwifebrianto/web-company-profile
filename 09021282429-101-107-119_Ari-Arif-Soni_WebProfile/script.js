@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // ==========================================
-  // 2. FITUR VALIDASI FORM (DIHAPUS SESUAI PERMINTAAN)
+  // 2. FITUR VALIDASI FORM
   // ==========================================
   const contactForm = document.getElementById("contactForm");
 
