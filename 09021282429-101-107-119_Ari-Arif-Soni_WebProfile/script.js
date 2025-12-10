@@ -1,31 +1,48 @@
 document.addEventListener("DOMContentLoaded", function () {
   // ==========================================
-  // 1. FITUR DARK MODE
+  // 1. FITUR DARK MODE (Tetap Ditingkatkan)
   // ==========================================
   const darkModeToggle = document.getElementById("darkModeToggle");
-  const body = document.body;
+  
+  const rootElement = document.documentElement; 
+  const bodyElement = document.body;
   const navbar = document.querySelector(".navbar");
 
-  // Cek LocalStorage
-  if (localStorage.getItem("theme") === "dark") {
-    body.classList.add("dark-mode");
+  const isDarkMode = rootElement.classList.contains("dark-mode");
+
+  if (isDarkMode && !bodyElement.classList.contains("dark-mode")) {
+      bodyElement.classList.add("dark-mode");
+  }
+
+  if (isDarkMode) {
     if (darkModeToggle) darkModeToggle.innerHTML = "☀️ Light";
-    if (navbar) navbar.classList.remove("navbar-light");
-    if (navbar) navbar.classList.add("navbar-dark");
+
+    if (navbar) {
+        navbar.classList.add("navbar-dark");
+        navbar.classList.remove("navbar-light");
+    }
   } else {
-    if (navbar) navbar.classList.add("navbar-light");
+
+    if (darkModeToggle) darkModeToggle.innerHTML = "🌙 Mode";
+    if (navbar) {
+        navbar.classList.add("navbar-light");
+        navbar.classList.remove("navbar-dark");
+    }
   }
 
   if (darkModeToggle) {
     darkModeToggle.addEventListener("click", () => {
-      body.classList.toggle("dark-mode");
+    
+      rootElement.classList.toggle("dark-mode");
 
-      if (body.classList.contains("dark-mode")) {
+      bodyElement.classList.toggle("dark-mode"); 
+
+      if (rootElement.classList.contains("dark-mode")) {
         darkModeToggle.innerHTML = "☀️ Light";
         localStorage.setItem("theme", "dark");
         if (navbar) navbar.classList.replace("navbar-light", "navbar-dark");
       } else {
-        darkModeToggle.innerHTML = "🌙 Dark";
+        darkModeToggle.innerHTML = "🌙 Mode";
         localStorage.setItem("theme", "light");
         if (navbar) navbar.classList.replace("navbar-dark", "navbar-light");
       }
@@ -33,21 +50,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // ==========================================
-  // 2. FITUR VALIDASI FORM
+  // 2. FITUR VALIDASI FORM (DIHAPUS SESUAI PERMINTAAN)
   // ==========================================
   const contactForm = document.getElementById("contactForm");
 
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
-
-      const nameInput = document.getElementById("name").value;
-      const emailInput = document.getElementById("email").value;
-      const nameError = document.getElementById("nameError");
-      const emailError = document.getElementById("emailError");
-
-      nameError.innerText = "";
-      emailError.innerText = "";
+      
       let isValid = true;
 
       if (isValid) {
