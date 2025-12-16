@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // ==========================================
-  // 1. FITUR DARK MODE (Tetap Ditingkatkan)
+  // 1. FITUR DARK MODE
   // ==========================================
   const darkModeToggle = document.getElementById("darkModeToggle");
   
